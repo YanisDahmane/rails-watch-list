@@ -1,0 +1,15 @@
+<div class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white"><%= @list.name %></h1>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+  <div class="container-fluid">
+    <p class="navbar-brand badge rounded-pill text-bg-warning" href="#"><%= @movies.size %> / films</p>
+    <%= link_to "Add bookmarks", new_list_bookmark_path(params["id"]), class: "navbat-toggler btn btn-secondary" %>
+  </div>
+</nav>
+<% @movies.each do |movie| %>
+  <%= render "movie", movie: movie %>
+<% end %>

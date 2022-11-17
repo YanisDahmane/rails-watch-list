@@ -1,0 +1,11 @@
+<div class="col-md-3" style="margin: 8px">
+  <%= link_to movies_path(movie) do%>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= movie.title %></h5>
+        <p class="card-text"><%= movie.overview %></p>
+        <p class="card-text"><%= final = ""; (1..movie.rating).each{final+="★"}; (movie.rating..10).each{final+="☆"}; final %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

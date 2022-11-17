@@ -1,0 +1,20 @@
+<div class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white">Save any kind of movies</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-4">Classic</p>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Mes lists</a>
+    <%= link_to "Create new list", new_list_path, class: "navbat-toggler btn btn-secondary" %>
+  </div>
+</nav>
+<div class="row">
+  <% @lists.each do |list| %>
+    <%= render "list", list: list %>
+  <% end %>
+</div>
